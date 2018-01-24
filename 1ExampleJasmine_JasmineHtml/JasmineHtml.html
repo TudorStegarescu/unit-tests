@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Jasmine Spec Runner: repeat</title>
+
+        <link href="helpers/jasmine.css" rel="stylesheet"/>
+		<script type="text/javascript" src="helpers/jquery.min.js"></script>
+        <!-- Jasmine files -->
+        <script type="text/javascript" src="helpers/jasmine.js"></script>
+        <script type="text/javascript" src="helpers/jasmine-html.js"></script>
+    
+        <!-- CUSTOMIZE: The code to be tested and the tests -->
+        <script type="text/javascript" src="js/object.js"></script>
+		 <script type="text/javascript">
+			function require(){
+			
+			}
+		</script>
+        <script type="text/javascript" src="js/tests/object.spec.js"></script>
+		
+        <script type="text/javascript">
+			
+            (function() {
+                var jasmineEnv = jasmine.getEnv();
+                jasmineEnv.updateInterval = 1000;
+
+                var trivialReporter = new jasmine.TrivialReporter();
+                jasmineEnv.addReporter(trivialReporter);
+
+                jasmineEnv.specFilter = function(spec) {
+                    return trivialReporter.specFilter(spec);
+                };
+
+                var currentWindowOnload = window.onload;
+                window.onload = function() {
+                    if (currentWindowOnload) {
+                        currentWindowOnload();
+                    }
+                    jasmineEnv.execute();
+                };
+            })();
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

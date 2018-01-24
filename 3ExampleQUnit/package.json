@@ -1,0 +1,11 @@
+{
+  "name": "unit_testing_javascript_jasmine_karma_karmaCoverage_junit",
+  "description": "npm files needed to unit test javascript in isolation",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {
+    "karma": "~0.10.8",
+    "karma-qunit": "~0.1.1",
+	"karma-junit-reporter": "~0.2.1"
+  }
+}
